@@ -1,0 +1,96 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
+
+
+local Window = Library.CreateLib("trash gui", "RJTheme6")
+
+
+local Tab = Window:NewTab("auto farm")
+
+
+local Section = Tab:NewSection("USE AUTO CLIKER!!!!!!!!!")
+
+
+Section:NewToggle("auto farm", "ToggleInfo", function(state)
+    if state then
+        local player = game.Players.LocalPlayer
+local waterfall = game.Workspace.MapLayout.Waterfall.Water
+player.Character.HumanoidRootPart.CFrame = waterfall.CFrame
+    else
+        local player = game.Players.LocalPlayer
+local waterfall = game.Workspace.MapLayout.Waterfall.Water
+player.Character.HumanoidRootPart.CFrame = waterfall.CFrame
+    end
+end)
+
+
+Section:NewButton("anti afk", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/KazeOnTop/Rice-Anti-Afk/main/Wind", true))()
+end)
+
+
+local Tab = Window:NewTab("speed + jumppower")
+
+
+local Section = Tab:NewSection("Section Name")
+
+
+Section:NewSlider("walkspeed", "SliderInfo", 500, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+
+
+Section:NewSlider("jumppower", "SliderInfo", 500, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+
+local Tab = Window:NewTab("teleport")
+
+
+local Section = Tab:NewSection("teleport")
+
+
+Section:NewButton("telepor to smile ball", "ButtonInfo", function()
+    local player = game.Players.LocalPlayer
+local sticky = game.Workspace.sticky
+player.Character.HumanoidRootPart.CFrame = sticky.CFrame
+
+end)
+
+
+Section:NewButton("teleport to craft area", "ButtonInfo", function()
+    local player = game.Players.LocalPlayer
+local tpTo = game.Workspace.StartArea.Hub.TpTo
+player.Character.HumanoidRootPart.CFrame = tpTo.CFrame
+
+end)
+
+
+Section:NewButton("teleport to end", "ButtonInfo", function()
+    local player = game.Players.LocalPlayer
+local endDelete = game.Workspace.MapLayout.EndMap.Mechanics.EndDelete
+player.Character.HumanoidRootPart.CFrame = endDelete.CFrame
+
+end)
+
+
+local Tab = Window:NewTab("Misc")
+
+
+local Section = Tab:NewSection("misc")
+
+
+Section:NewButton("inf yield", "ButtonInfo", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+
+Section:NewButton("Btools", "ButtonInfo", function()
+    loadstring(game:HttpGet(('https://pastebin.com/raw/VHpzmw3a'),true))()
+end)
+
+
+Section:NewButton("darkdex v4", "ButtonInfo", function()
+    	loadstring(game:HttpGet("https://raw.githubusercontent.com/SpaceSpiffer/Scripts/main/Script5", true))()
+end)
